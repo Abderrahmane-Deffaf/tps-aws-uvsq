@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire</title>
+</head>
+<body>
+  <!-- in case of method post we got an error of 405 method not allowed -->
+  <form action="https://www.google.fr/search" method="get">
+    <input type="hidden" value="site:site:w3schools.com" name="q">
+    <input pattern=".*(HTML|CSS).*" placeholder="chercher" required name="q" type="text">
+    <br>
+    <label for="apple_value">Apple</label>
+    <input type="checkbox" name="q" id="apple_value" value="apple"> 
+    <br>
+    <label for="lang">Langue</label>
+    <select name="hl" id="lang">
+      <option value="en">English</option>
+      <option value="fr">French</option>
+      <option value="ar">Arabic</option>
+    </select>
+    <button>Rechercher</button>
+  </form>
+</body>
+</html>
