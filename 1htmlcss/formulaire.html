@@ -1,26 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire</title>
+  <link rel="stylesheet" href="index.css">
+  <title>Page de recherche</title>
 </head>
-<body>
-  <!-- in case of method post we got an error of 405 method not allowed -->
-  <form action="https://www.google.fr/search" method="get">
-    <input type="hidden" value="site:site:w3schools.com" name="q">
-    <input pattern=".*(HTML|CSS).*" placeholder="chercher" required name="q" type="text">
-    <br>
-    <label for="apple_value">Apple</label>
-    <input type="checkbox" name="q" id="apple_value" value="apple"> 
-    <br>
-    <label for="lang">Langue</label>
-    <select name="hl" id="lang">
-      <option value="en">English</option>
-      <option value="fr">French</option>
-      <option value="ar">Arabic</option>
-    </select>
-    <button>Rechercher</button>
-  </form>
+<body class="search-page">
+  <main class="page-shell">
+    <section class="hero-card compact">
+      <div class="hero-copy">
+        <p class="eyebrow">1htmlcss</p>
+        <h1>Recherche HTML / CSS</h1>
+        <p class="lead">
+          Formulaire de recherche simple pour lancer une requete Google et
+          cibler le site W3Schools.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="../index.html">Accueil des projets</a>
+          <a class="button secondary" href="./index.html">Retour au CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card form-card">
+      <h2>Faire une recherche</h2>
+      <p class="section-intro">
+        La saisie doit contenir le mot HTML ou CSS. Les resultats sont limites
+        au domaine W3Schools.
+      </p>
+
+      <form class="search-form" action="https://www.google.fr/search" method="get">
+        <input type="hidden" value="w3schools.com" name="as_sitesearch">
+
+        <label for="search_query">Mot cle</label>
+        <input
+          id="search_query"
+          pattern=".*([Hh][Tt][Mm][Ll]|[Cc][Ss][Ss]).*"
+          placeholder="Exemple : cours HTML forms"
+          required
+          title="Le texte doit contenir HTML ou CSS."
+          name="q"
+          type="text"
+        >
+
+        <label class="checkbox-field" for="apple_value">
+          <input type="checkbox" name="as_oq" id="apple_value" value="apple">
+          Ajouter le mot cle apple
+        </label>
+
+        <label for="lang">Langue des resultats</label>
+        <select name="hl" id="lang">
+          <option value="fr">Francais</option>
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+        </select>
+
+        <button type="submit">Rechercher</button>
+      </form>
+    </section>
+  </main>
 </body>
 </html>

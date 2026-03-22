@@ -1,93 +1,111 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>CV</title>
+    <title>CV - Abderrahmane Deffaf</title>
   </head>
-  <body>
-    <h1>DEFFAF Abderrahmane</h1>
-    <p>Welcome to my portfolio.</p>
-    <nav>
-      <ul>
-        <li>
-          <a href="#formation">Formation</a>
-        </li>
-        <li>
-          <a href="#diplomes">Diplomas</a>
-        </li>
-        <li>
-          <a href="#loisirs">Hobbies</a>
-        </li>
-      </ul>
-    </nav>
+  <body class="cv-page">
+    <div class="page-shell">
+      <header class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">1htmlcss</p>
+          <h1>Abderrahmane Deffaf</h1>
+          <p class="lead">
+            Etudiant en informatique, interesse par le developpement web,
+            l'algorithmique et la conception d'interfaces claires.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="../index.html">Accueil des projets</a>
+            <a class="button secondary" href="./formulaire.html">Page de recherche</a>
+          </div>
+        </div>
 
-    <section id="personal_infos">
-      <h2>Personal Information</h2>
-      <ul>
-        <li>Name: Deffaf Abderrahmane</li>
-        <li>Age: 23</li>
-        <li>Email: deffaf@example.com</li>
-      </ul>
-      <figure class="profile_pic">
-        <img
-          width="100"
-          height="100"
-          src="./math-pic.png"
-          alt="deffaf abderrahmane image"
-        >
-      </figure>
-    </section>
-    <section id="reste">
-      <h2>Other Information</h2>
-      <article id="formation">
-        <h3>Formation</h3>
-        <ul>
-          <li>
-            Bachelor's Degree in Computer Science - University of XYZ
-            (2018-2021)
-          </li>
-          <li>
-            Master's Degree in Software Engineering - University of ABC
-            (2021-2023)
-          </li>
-        </ul>
-      </article>
-      <article id="diplomes">
-        <h3>Diplomas</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Degree</th>
-              <th>Institution</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Bachelor's Degree in Computer Science</td>
-              <td>University of XYZ</td>
-              <td>2021</td>
-            </tr>
-            <tr>
-              <td>Master's Degree in Software Engineering</td>
-              <td>University of ABC</td>
-              <td>2023</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-      <article id="loisirs">
-        <h3>Hobbies</h3>
-        <p>In my free time, I enjoy:</p>
-        <ul>
-          <li>Coding and learning new programming languages</li>
-          <li>Playing video games</li>
-          <li>Traveling and exploring new places</li>
-          <li>Cooking and trying out new recipes</li>
-        </ul>
-      </article>
-    </section>
+        <figure class="profile-card">
+          <img
+            width="160"
+            height="160"
+            src="./math-pic.png"
+            alt="Portrait de Abderrahmane Deffaf"
+          >
+          <figcaption>Profil etudiant axe web, logiciel et pratique.</figcaption>
+        </figure>
+      </header>
+
+      <nav class="section-nav" aria-label="Navigation du CV">
+        <a href="#infos">Infos</a>
+        <a href="#formation">Formation</a>
+        <a href="#diplomes">Diplomes</a>
+        <a href="#loisirs">Loisirs</a>
+      </nav>
+
+      <main class="content-grid">
+        <section class="card" id="infos">
+          <h2>Informations personnelles</h2>
+          <ul class="info-list">
+            <li><strong>Nom :</strong> Deffaf Abderrahmane</li>
+            <li><strong>Age :</strong> 23 ans</li>
+            <li><strong>Email :</strong> deffaf@example.com</li>
+            <li><strong>Objectif :</strong> construire des projets web simples, propres et lisibles</li>
+          </ul>
+        </section>
+
+        <section class="card" id="formation">
+          <h2>Formation</h2>
+          <ul class="timeline">
+            <li>
+              <strong>Bachelor en informatique</strong>
+              <span>University of XYZ - 2018 a 2021</span>
+            </li>
+            <li>
+              <strong>Master en genie logiciel</strong>
+              <span>University of ABC - 2021 a 2023</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card card-wide" id="diplomes">
+          <h2>Diplomes</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Diplome</th>
+                  <th>Etablissement</th>
+                  <th>Annee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Bachelor en informatique</td>
+                  <td>University of XYZ</td>
+                  <td>2021</td>
+                </tr>
+                <tr>
+                  <td>Master en genie logiciel</td>
+                  <td>University of ABC</td>
+                  <td>2023</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card card-wide" id="loisirs">
+          <h2>Loisirs</h2>
+          <p class="section-intro">
+            En dehors des cours et des projets, j'aime garder une pratique
+            reguliere autour de la technique et de la creativite.
+          </p>
+          <ul class="hobby-list">
+            <li>Coder et tester de nouvelles idees</li>
+            <li>Jouer aux jeux video</li>
+            <li>Voyager et decouvrir de nouveaux lieux</li>
+            <li>Cuisiner et essayer de nouvelles recettes</li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
