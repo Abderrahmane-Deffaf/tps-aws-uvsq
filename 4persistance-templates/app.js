@@ -15,9 +15,10 @@ app.get('/signin', (req, res)=> {
   res.sendFile(__dirname + "/static/form.html");
 })
 
-app.get('/hello', helloHandler )
-
-app.get('/bye', byeHandler) 
+//app.get('/hello', helloHandler )
+app.post('/hello', helloHandler)
+//app.get('/bye', byeHandler) 
+app.post('/bye', byeHandler);
 
 app.all('/', (req, res, next)=> {
   res.redirect("/signin");

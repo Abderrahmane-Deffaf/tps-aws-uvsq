@@ -18,8 +18,12 @@
       <li>{{ fruit }}</li> 
     {% endfor %} 
   </ul>
-  <div>
+  <!-- <div>
     <a href="/bye?nickName={{name}}">Say Bye</a>
-  </div>
+  </div> -->
+  <form action="/bye" method="post">
+    <input type="hidden" name="nickName" value="{{name}}">
+    <button>Say Bye</button>
+  </form>
 </body>
 </html>
